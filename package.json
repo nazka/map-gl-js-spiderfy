@@ -1,0 +1,15 @@
+{
+  "name": "@nazka-mapps/mapbox-gl-js-spiderfy",
+  "version": "0.0.1",
+  "description": "Spiderfy for Mapbox GL JS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nazka/mapbox-gl-js-spiderfy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nazka mapps",
+  "license": "ISC"
+}
