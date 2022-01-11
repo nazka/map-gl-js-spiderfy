@@ -1,15 +1,27 @@
 {
   "name": "@nazka-mapps/mapbox-gl-js-spiderfy",
   "version": "0.0.1",
-  "description": "Spiderfy for Mapbox GL JS",
+  "description": "Spiderfy for Maplibre and Mapbox",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/nazka/mapbox-gl-js-spiderfy.git"
   },
   "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "nazka mapps",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "color": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
