@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nazka/mapbox-gl-js-spiderfy.git"
+    "url": "git+ssh://git@github.com/nazka/map-gl-js-spiderfy.git"
   },
   "scripts": {
     "build": "webpack",

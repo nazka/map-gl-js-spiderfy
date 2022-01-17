@@ -73,6 +73,7 @@ class SpiderfyFlat extends Spiderfy {
         type: 'symbol',
         layout: {
           ...(spiderLeavesLayout || (type === 'symbol' && !spiderLeavesPaint ? layout : {})),
+          'icon-allow-overlap': true,
           'icon-offset': point,
         },
         paint: {
