@@ -42,9 +42,9 @@ class Spiderfy {
         
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
         if (leaf) {
-          if (closeOnLeafSelect) this._clearSpiderifiedCluster();
-          const feature = this.spiderifiedCluster.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
+          const feature = this.spiderifiedCluster?.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
           if (this._onLeafClick) this._onLeafClick(feature);
+          if (closeOnLeafSelect) this._clearSpiderifiedCluster();
           return;
         }
 
