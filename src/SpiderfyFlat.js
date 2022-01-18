@@ -56,7 +56,7 @@ class SpiderfyFlat extends Spiderfy {
           layout: {
             'icon-image': `${layerId}-spiderfy-leg${index}`,
             'icon-allow-overlap': true,
-            'icon-anchor': layout['icon-anchor'] ? layout['icon-anchor'] : 'center',
+            'icon-anchor': 'bottom',
             'icon-rotate': spiderLegs[index].rotation,
           },
         });

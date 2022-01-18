@@ -1,5 +1,4 @@
 const defaultOptions = {
-  type: 'layer',
   maxLeaves: 255,
   circleSpiralSwitchover: 10,
   circleOptions: {
@@ -8,7 +7,7 @@ const defaultOptions = {
   },
   spiralOptions: {
     legLengthStart: 25,
-    legLengthFactor: 2,
+    legLengthFactor: 2.2,
     leavesSeparation: 30,
     leavesOffset: [0, 0],
   },
