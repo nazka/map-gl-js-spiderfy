@@ -31,6 +31,7 @@ class Spiderfy3D extends Spiderfy {
         geometry: {
           type: 'Point',
           coordinates: [spiderLeafLatLng.lng, spiderLeafLatLng.lat],
+          properties: this.spiderifiedCluster?.leaves[i]?.properties || {},
         },
       });
 
@@ -54,7 +55,7 @@ class Spiderfy3D extends Spiderfy {
     const { 
       spiderLegsWidth, spiderLegsColor, spiderLegsAreVisible, spiderLeavesLayout, spiderLeavesPaint,
     } = this.options;
-    const { type, layout, paint } = this.clickedParentClusterStyle;
+    const { layout, paint } = this.clickedParentClusterStyle;
 
     if (spiderLegsAreVisible) {
       spiderLegs.forEach((spiderLeg, index) => {
@@ -84,10 +85,12 @@ class Spiderfy3D extends Spiderfy {
         },
         type: 'symbol',
         layout: {
-          ...(spiderLeavesLayout || (type === 'symbol' && !spiderLeavesPaint ? layout : {})),
+          ...(spiderLeavesLayout || !spiderLeavesPaint ? layout : {}),
         },
         paint: {
-          ...(spiderLeavesPaint || (type === 'symbol' && !spiderLeavesLayout ? paint : {})),
+          ...(spiderLeavesPaint || !spiderLeavesLayout ? paint : {}),
+          ...(!spiderLeavesPaint && !spiderLeavesLayout && paint['icon-color'] 
+            ? { 'icon-color': paint['icon-color'].toString() } : {})
         },
       });
       this.activeSpiderfyLayerIds.push(`${layerId}-spiderfy-leaf${index}`);

@@ -33,14 +33,16 @@ class SpiderfyFlat extends Spiderfy {
   }
 
   _drawFeaturesOnMap(points, spiderLegs, layerId, coordinates) {
-    const { type, layout, paint } = this.clickedParentClusterStyle;
+    const { layout, paint } = this.clickedParentClusterStyle;
     const { spiderLegsAreVisible, spiderLeavesLayout, spiderLeavesPaint } = this.options;
-    const feature = {
-      type: 'Feature',
-      geometry: { type: 'Point', coordinates },
-    };
 
     points.forEach((point, index) => {
+      const feature = {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates },
+        properties: this.spiderifiedCluster?.leaves[index]?.properties || {},
+      };
+
       if (spiderLegsAreVisible) {
         if (this.map.hasImage(`${layerId}-spiderfy-leg${index}`)) {
           this.map.removeImage(`${layerId}-spiderfy-leg${index}`);
@@ -72,12 +74,14 @@ class SpiderfyFlat extends Spiderfy {
         },
         type: 'symbol',
         layout: {
-          ...(spiderLeavesLayout || (type === 'symbol' && !spiderLeavesPaint ? layout : {})),
+          ...(spiderLeavesLayout || !spiderLeavesPaint ? layout : {}),
           'icon-allow-overlap': true,
           'icon-offset': point,
         },
         paint: {
-          ...(spiderLeavesPaint || (type === 'symbol' && !spiderLeavesLayout ? paint : {})),
+          ...(spiderLeavesPaint || !spiderLeavesLayout ? paint : {}),
+          ...(!spiderLeavesPaint && !spiderLeavesLayout && paint['icon-color'] 
+            ? { 'icon-color': paint['icon-color'].toString() } : {})
         },
       });
       this.activeSpiderfyLayerIds.push(`${layerId}-spiderfy-leaf${index}`);

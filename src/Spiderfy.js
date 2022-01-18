@@ -81,7 +81,6 @@ class Spiderfy {
           const leaves = await getClusterLeavesAsync(source, clusterId, maxLeaves);
           return JSON.stringify(leaves) === JSON.stringify(currentCluster.leaves);
         });
-
         if (sameClusterWithDifferentCoords) {
           const { coordinates } = sameClusterWithDifferentCoords.geometry;
           this.spiderifiedCluster.cluster.geometry.coordinates = coordinates;
@@ -90,8 +89,10 @@ class Spiderfy {
         }
       })
 
-      this.map.on('zoomend', async () => {
-        this._updateSpiderifiedClusterCoords();
+      this.map.on('zoomend', () => {
+        this.map.once('idle', async () => {
+          this._updateSpiderifiedClusterCoords();
+        });
       })
     });
   }
