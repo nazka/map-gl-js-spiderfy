@@ -9,14 +9,14 @@ class Spiderfy {
     this.clickedParentClusterStyle = null;
     this.options = { 
       ...defaultOptions, 
-      ...options,
+      ...(options || {}),
       circleOptions: {
         ...defaultOptions.circleOptions, 
-        ...options.circleOptions,
+        ...(options?.circleOptions || {}),
       },
       spiralOptions: {
         ...defaultOptions.spiralOptions, 
-        ...options.spiralOptions,
+        ...(options?.spiralOptions || {}),
       },
     };
   }
