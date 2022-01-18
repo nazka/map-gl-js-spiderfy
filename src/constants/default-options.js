@@ -1,5 +1,6 @@
 const defaultOptions = {
   maxLeaves: 255,
+  closeOnLeafSelect: true,
   circleSpiralSwitchover: 10,
   circleOptions: {
     distanceBetweenPoints: 50,

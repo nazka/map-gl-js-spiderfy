@@ -21,7 +21,7 @@ class Spiderfy {
     };
   }
 
-  applyToClusterLayer(layerId) {
+  applyTo(layerId) {
     const layer = this.map.getLayer(layerId);
     const source = this.map.getSource(layer.source);
 
@@ -37,16 +37,29 @@ class Spiderfy {
       });
 
       this.map.on('click', (e) => {
-        if (this.spiderifiedCluster) this._clearSpiderifiedCluster();
-        
+        const { maxLeaves, closeOnLeafSelect } = this.options;
         const features = this.map.queryRenderedFeatures(e.point);
+        
+        const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
+        if (leaf) {
+          if (closeOnLeafSelect) this._clearSpiderifiedCluster();
+          const feature = this.spiderifiedCluster.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
+          if (this._onLeafClick) this._onLeafClick(feature);
+          return;
+        }
+
         const cluster = features.find(f => f.layer.id === layerId && f.properties?.cluster);
+        const prevClusterId = this.spiderifiedCluster?.cluster?.properties?.cluster_id;
+
+        if (this.spiderifiedCluster && prevClusterId === cluster?.properties?.cluster_id) return;
+
+        this._clearSpiderifiedCluster();
+
         if (!cluster) return;
 
         this.clickedParentClusterStyle = { type: layer.type, layout, paint };
 
         const clusterId = cluster.properties.cluster_id;
-        const { maxLeaves } = this.options;
         source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
           this.spiderifiedCluster = { cluster, leaves };
           this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
@@ -81,6 +94,10 @@ class Spiderfy {
         this._updateSpiderifiedClusterCoords();
       })
     });
+  }
+
+  onLeafClick(f) {
+    this._onLeafClick = f;
   }
 
   _calculatePointsInCircle(totalPoints) {
