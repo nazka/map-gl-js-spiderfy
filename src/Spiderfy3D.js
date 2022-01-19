@@ -35,7 +35,7 @@ class Spiderfy3D extends Spiderfy {
         },
       });
 
-      if (this.options.spiderLegsAreVisible) {
+      if (!this.options.spiderLegsAreHidden) {
         spiderLegs.push({
           type: 'Feature',
           geometry: {
@@ -53,11 +53,11 @@ class Spiderfy3D extends Spiderfy {
 
   _drawFeaturesOnMap(spiderLeaves, spiderLegs, layerId) {
     const { 
-      spiderLegsWidth, spiderLegsColor, spiderLegsAreVisible, spiderLeavesLayout, spiderLeavesPaint,
+      spiderLegsWidth, spiderLegsColor, spiderLegsAreHidden, spiderLeavesLayout, spiderLeavesPaint,
     } = this.options;
     const { layout, paint } = this.clickedParentClusterStyle;
 
-    if (spiderLegsAreVisible) {
+    if (!spiderLegsAreHidden) {
       spiderLegs.forEach((spiderLeg, index) => {
         this.map.addLayer({
           id: `${layerId}-spiderfy-leg${index}`,

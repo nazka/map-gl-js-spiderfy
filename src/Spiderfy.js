@@ -37,14 +37,14 @@ class Spiderfy {
       });
 
       this.map.on('click', (e) => {
-        const { maxLeaves, closeOnLeafSelect } = this.options;
+        const { maxLeaves, closeOnLeafClick } = this.options;
         const features = this.map.queryRenderedFeatures(e.point);
         
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
         if (leaf) {
           const feature = this.spiderifiedCluster?.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
           if (this._onLeafClick) this._onLeafClick(feature);
-          if (closeOnLeafSelect) this._clearSpiderifiedCluster();
+          if (closeOnLeafClick) this._clearSpiderifiedCluster();
           return;
         }
 
@@ -102,15 +102,15 @@ class Spiderfy {
   }
 
   _calculatePointsInCircle(totalPoints) {
-    const { distanceBetweenPoints, leavesOffset } = this.options.circleOptions;
+    const { leavesSeparation, leavesOffset } = this.options.circleOptions;
     const points = [];
     const theta = (Math.PI * 2) / totalPoints;
     let angle = theta;
 
     for (let i = 0; i < totalPoints; i += 1) {
       angle = theta * i;
-      const x = distanceBetweenPoints * Math.cos(angle) + leavesOffset[0];
-      const y = distanceBetweenPoints * Math.sin(angle) + leavesOffset[1];
+      const x = leavesSeparation * Math.cos(angle) + leavesOffset[0];
+      const y = leavesSeparation * Math.sin(angle) + leavesOffset[1];
       points.push([x, y]);
     }
     return points;

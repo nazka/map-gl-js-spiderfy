@@ -3,11 +3,11 @@ import { calcAngleDegrees, generateLegImage } from './utils/helpers';
 
 class SpiderfyFlat extends Spiderfy {
   _createSpiderfyLayers(layerId, features, clusterCoords) {
-    const { circleSpiralSwitchover, spiderLegsAreVisible } = this.options;
+    const { circleSpiralSwitchover, spiderLegsAreHidden } = this.options;
     const drawCircle = features.length < circleSpiralSwitchover;
     const points = drawCircle ? this._calculatePointsInCircle(features.length) 
       : this._calculatePointsInSpiral(features.length);
-    const spiderLegs = spiderLegsAreVisible && this._generateLegs(points, drawCircle);
+    const spiderLegs = !spiderLegsAreHidden && this._generateLegs(points, drawCircle);
     
     this._drawFeaturesOnMap(points, spiderLegs, layerId, clusterCoords);
   }
@@ -34,7 +34,7 @@ class SpiderfyFlat extends Spiderfy {
 
   _drawFeaturesOnMap(points, spiderLegs, layerId, coordinates) {
     const { layout, paint } = this.clickedParentClusterStyle;
-    const { spiderLegsAreVisible, spiderLeavesLayout, spiderLeavesPaint } = this.options;
+    const { spiderLegsAreHidden, spiderLeavesLayout, spiderLeavesPaint } = this.options;
 
     points.forEach((point, index) => {
       const feature = {
@@ -43,7 +43,7 @@ class SpiderfyFlat extends Spiderfy {
         properties: this.spiderifiedCluster?.leaves[index]?.properties || {},
       };
 
-      if (spiderLegsAreVisible) {
+      if (!spiderLegsAreHidden) {
         if (this.map.hasImage(`${layerId}-spiderfy-leg${index}`)) {
           this.map.removeImage(`${layerId}-spiderfy-leg${index}`);
         }

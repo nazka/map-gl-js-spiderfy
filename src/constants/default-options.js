@@ -1,9 +1,9 @@
 const defaultOptions = {
   maxLeaves: 255,
-  closeOnLeafSelect: true,
+  closeOnLeafClick: false,
   circleSpiralSwitchover: 10,
   circleOptions: {
-    distanceBetweenPoints: 50,
+    leavesSeparation: 50,
     leavesOffset: [0, 0],
   },
   spiralOptions: {
@@ -12,7 +12,7 @@ const defaultOptions = {
     leavesSeparation: 30,
     leavesOffset: [0, 0],
   },
-  spiderLegsAreVisible: true,
+  spiderLegsAreHidden: false,
   spiderLegsWidth: 1,
   spiderLegsColor: 'rgba(100, 100, 100, .7)',
   spiderLeavesLayout: null, // default is cluster style layout
