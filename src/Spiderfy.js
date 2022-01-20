@@ -43,7 +43,7 @@ class Spiderfy {
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
         if (leaf) {
           const feature = this.spiderifiedCluster?.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
-          if (this._onLeafClick) this._onLeafClick(feature);
+          if (this.options.onLeafClick) this.options.onLeafClick(feature);
           if (closeOnLeafClick) this._clearSpiderifiedCluster();
           return;
         }
@@ -95,10 +95,6 @@ class Spiderfy {
         });
       })
     });
-  }
-
-  onLeafClick(f) {
-    this._onLeafClick = f;
   }
 
   _calculatePointsInCircle(totalPoints) {
