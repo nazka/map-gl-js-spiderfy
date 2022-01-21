@@ -5,8 +5,8 @@ itself instead of on top of it. This allows for more advanced interactions with 
 This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any contributions!
 
 ## Examples
-- [map-gl-js-spiderfy basic demo](https://codepen.io/cssimon/full/vYePWLW)
-- [map-gl-js-spiderfy advanced demo](https://codepen.io/cssimon/full/NWamBRL)
+- [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm)
+- [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX)
 
 ## Usage
 Install the npm package:
