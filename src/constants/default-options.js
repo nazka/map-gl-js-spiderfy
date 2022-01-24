@@ -2,7 +2,7 @@ const defaultOptions = {
   maxLeaves: 255,
   minZoomLevel: 0,
   zoomIncrement: 2,
-  closeOnLeafClick: false,
+  closeOnLeafClick: true,
   circleSpiralSwitchover: 10,
   circleOptions: {
     leavesSeparation: 50,

@@ -22,7 +22,8 @@ import Spiderfy from '@nazka/map-gl-js-spiderfy';
 // create a new spiderfy object
 const spiderfy = new Spiderfy(map, {
   onLeafClick: f => console.log(f),
-  closeOnLeafClick: true,
+  minZoomLevel: 12,
+  zoomIncrement: 2,
 });
 
 // enable spiderfy on a layer
@@ -42,14 +43,12 @@ new Spiderfy(map, options)
 
 - **`options`**
   - **`onLeafClick`** - allows to do something with the clicked leaf [function]
-  
-  - **`maxLeaves`** - limit the amount of leaves that can be in a spiderfication [number] [default: 255]
 
   - **`minZoomLevel`** - allow spiderfication starting from this zoom level [number] [default: 0]
 
   - **`zoomIncrement`** - if minZoomLevel is not met on cluster click, the map will zoom by this amount instead [number] [default: 2]
   
-  - **`closeOnLeafClick`** - clear the spiderfication on leaf click [boolean] [default: false]
+  - **`closeOnLeafClick`** - clear the spiderfication on leaf click [boolean] [default: true]
   
   - **`circleSpiralSwitchover`** - number of leaves required to switch from circle to spiral spiderfication [number] [default: 10]
   
@@ -78,6 +77,8 @@ new Spiderfy(map, options)
   - **`spiderLeavesLayout`** - your own style layout attributes ('icon-offset' can't be used) [object] [default: takes layout from style parent cluster marker]
   
   - **`spiderLeavesPaint`** - your own style paint attributes [object] [default: takes paint style from parent cluster marker]
+  
+  - **`maxLeaves`** - limit the amount of leaves that can be in a spiderfication [number] [default: 255]
   
   - **`renderMethod`** - set to "3D" for this experimental render feature [string] [default: 'flat']
 
