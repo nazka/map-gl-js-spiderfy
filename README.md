@@ -44,6 +44,10 @@ new Spiderfy(map, options)
   - **`onLeafClick`** - allows to do something with the clicked leaf [function]
   
   - **`maxLeaves`** - limit the amount of leaves that can be in a spiderfication [number] [default: 255]
+
+  - **`minZoomLevel`** - allow spiderfication starting from this zoom level [number] [default: 0]
+
+  - **`zoomIncrement`** - if minZoomLevel is not met on cluster click, the map will zoom by this amount instead [number] [default: 2]
   
   - **`closeOnLeafClick`** - clear the spiderfication on leaf click [boolean] [default: false]
   
@@ -79,4 +83,7 @@ new Spiderfy(map, options)
 
 #### Functions
 - `applyTo(layerId)` apply the spiderfier on a layer [function]
+
   - `layerId` maplibre/mapbox layer id [string]
+
+- `unspiderfyAll()` clears any active spiderfication from the map [function]

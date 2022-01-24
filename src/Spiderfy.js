@@ -37,7 +37,7 @@ class Spiderfy {
       });
 
       this.map.on('click', (e) => {
-        const { maxLeaves, closeOnLeafClick } = this.options;
+        const { maxLeaves, closeOnLeafClick, minZoomLevel, zoomIncrement } = this.options;
         const features = this.map.queryRenderedFeatures(e.point);
         
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
@@ -50,6 +50,13 @@ class Spiderfy {
 
         const cluster = features.find(f => f.layer.id === layerId && f.properties?.cluster);
         const prevClusterId = this.spiderifiedCluster?.cluster?.properties?.cluster_id;
+
+        if (cluster && this.map.getZoom() < minZoomLevel) {
+          if (zoomIncrement) {
+            this.map.flyTo({center: e.lngLat.toArray(), zoom: this.map.getZoom() + zoomIncrement});
+          }
+          return;
+        }
 
         if (this.spiderifiedCluster && prevClusterId === cluster?.properties?.cluster_id) return;
 
@@ -97,6 +104,10 @@ class Spiderfy {
     });
   }
 
+  unspiderfyAll() {
+    this._clearSpiderifiedCluster();
+  }
+
   _calculatePointsInCircle(totalPoints) {
     const { leavesSeparation, leavesOffset } = this.options.circleOptions;
     const points = [];
@@ -132,10 +143,10 @@ class Spiderfy {
   }
 
   _clearSpiderifiedCluster() {
-    const layersIds = [...this.activeSpiderfyLayerIds];
-    layersIds.forEach((layersId) => {
-      this.map.removeLayer(layersId);
-      this.map.removeSource(layersId);
+    const layerIds = [...this.activeSpiderfyLayerIds];
+    layerIds.forEach((layerId) => {
+      this.map.removeLayer(layerId);
+      this.map.removeSource(layerId);
     });
     this.spiderifiedCluster = null;
     this.activeSpiderfyLayerIds = [];
