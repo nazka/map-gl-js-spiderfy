@@ -22,7 +22,7 @@ import Spiderfy from '@nazka/map-gl-js-spiderfy';
 // create a new spiderfy object
 const spiderfy = new Spiderfy(map, {
   onLeafClick: f => console.log(f),
-  closeOnLeafClick: false,
+  closeOnLeafClick: true,
 });
 
 // enable spiderfy on a layer
