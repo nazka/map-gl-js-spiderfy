@@ -60,11 +60,11 @@ new Spiderfy(map, options)
   
   - **`spiralOptions`** - options that are specific to spiral spiderfications, these interact with each other and will probably all require some tweaking when changing one of them [object]
   
-    - **`legLengthStart`** - the starting length of the spider leg [number] [default: 25]
+    - **`legLengthStart`** - the starting length of the spider leg in pixels [number] [default: 25]
     
-    - **`legLengthFactor`** - the growth factor of the next leg [number] [default: 2.2]
+    - **`legLengthFactor`** - the growth factor of the next leg in pixels [number] [default: 2.2]
     
-    - **`leavesSeparation`** - distance between the spiderfied leaves [number] [default: 30]
+    - **`leavesSeparation`** - distance between the spiderfied leaves in pixels [number] [default: 30]
     
     - **`leavesOffset`** - move the leaves relative to the parent cluster in pixels [array] [default: [0, 0]]
   
@@ -74,9 +74,9 @@ new Spiderfy(map, options)
   
   - **`spiderLegsColor`** - the color of the spider legs [string] [default: 1]
   
-  - **`spiderLeavesLayout`** - your own style layout attributes ('icon-offset' can't be used) [object] [default: takes layout from style parent cluster marker]
+  - **`spiderLeavesLayout`** - your own style layout attributes ('icon-offset' can't be used) [object] [default: cluster layout]
   
-  - **`spiderLeavesPaint`** - your own style paint attributes [object] [default: takes paint style from parent cluster marker]
+  - **`spiderLeavesPaint`** - your own style paint attributes [object] [default: cluster paint]
   
   - **`maxLeaves`** - limit the amount of leaves that can be in a spiderfication [number] [default: 255]
   

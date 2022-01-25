@@ -1,0 +1,680 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "node/962995393",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7046231,
+          50.8770986
+        ]
+      },
+      "properties": {
+        "@id": "node/962995393",
+        "fee": "no",
+        "note": "only for men to pee and only become available at night, retract into the ground during the day",
+        "amenity": "toilets",
+        "wheelchair": "no",
+        "changing_table": "no"
+      }
+    },
+    {
+      "id": "node/1233666261",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7147809,
+          50.8827048
+        ]
+      },
+      "properties": {
+        "@id": "node/1233666261",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/2003228711",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7025573,
+          50.8790717
+        ]
+      },
+      "properties": {
+        "@id": "node/2003228711",
+        "layer": "-1",
+        "amenity": "toilets",
+        "wheelchair": "yes",
+        "opening_hours": "Mo-Su 08:00-24:00"
+      }
+    },
+    {
+      "id": "node/2747965004",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6896425,
+          50.8783781
+        ]
+      },
+      "properties": {
+        "@id": "node/2747965004",
+        "fee": "no",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/2774129504",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7144187,
+          50.870777
+        ]
+      },
+      "properties": {
+        "@id": "node/2774129504",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/2948080981",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6986198,
+          50.8805281
+        ]
+      },
+      "properties": {
+        "@id": "node/2948080981",
+        "fee": "yes",
+        "amenity": "toilets",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "id": "node/3197447689",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6991038,
+          50.8844131
+        ]
+      },
+      "properties": {
+        "@id": "node/3197447689",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/4327669096",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7193609,
+          50.8926418
+        ]
+      },
+      "properties": {
+        "@id": "node/4327669096",
+        "amenity": "toilets",
+        "changing_table": "yes",
+        "changing_table:location": "unisex_toilet"
+      }
+    },
+    {
+      "id": "node/4371647096",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7149885,
+          50.8642257
+        ]
+      },
+      "properties": {
+        "@id": "node/4371647096",
+        "access": "customers",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "De Abdijmolen"
+      }
+    },
+    {
+      "id": "node/5071102567",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7006627,
+          50.8562181
+        ]
+      },
+      "properties": {
+        "@id": "node/5071102567",
+        "fee": "no",
+        "level": "0",
+        "access": "customers",
+        "indoor": "corridor",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "wheelchair": "yes",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/5071102568",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7010359,
+          50.8561505
+        ]
+      },
+      "properties": {
+        "@id": "node/5071102568",
+        "fee": "no",
+        "level": "0",
+        "access": "customers",
+        "indoor": "corridor",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "wheelchair": "yes",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/5071102569",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7012039,
+          50.856374
+        ]
+      },
+      "properties": {
+        "@id": "node/5071102569",
+        "fee": "no",
+        "level": "0",
+        "access": "customers",
+        "indoor": "corridor",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "wheelchair": "yes",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/5586357523",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6932531,
+          50.8648029
+        ]
+      },
+      "properties": {
+        "@id": "node/5586357523",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/5628362321",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7006937,
+          50.8576437
+        ]
+      },
+      "properties": {
+        "@id": "node/5628362321",
+        "fee": "no",
+        "indoor": "yes",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/5630920121",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7003846,
+          50.8858459
+        ]
+      },
+      "properties": {
+        "@id": "node/5630920121",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/6319153486",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7041659,
+          50.8678629
+        ]
+      },
+      "properties": {
+        "@id": "node/6319153486",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/6407030572",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7010642,
+          50.8566384
+        ]
+      },
+      "properties": {
+        "@id": "node/6407030572",
+        "access": "customers",
+        "indoor": "corridor",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/6407030573",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7007903,
+          50.8569853
+        ]
+      },
+      "properties": {
+        "@id": "node/6407030573",
+        "access": "customers",
+        "indoor": "corridor",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/6796862586",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7036228,
+          50.8805686
+        ]
+      },
+      "properties": {
+        "@id": "node/6796862586",
+        "fee": "no",
+        "male": "yes",
+        "access": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "Stad Leuven",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/6832897982",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.70006,
+          50.8562
+        ]
+      },
+      "properties": {
+        "@id": "node/6832897982",
+        "level": "0;1",
+        "access": "customers",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7834614493",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7047573,
+          50.8808744
+        ]
+      },
+      "properties": {
+        "@id": "node/7834614493",
+        "fee": "yes",
+        "access": "yes",
+        "indoor": "yes",
+        "unisex": "yes",
+        "amenity": "toilets",
+        "operator": "Galeria Inno",
+        "wheelchair": "yes",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7835232730",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7036397,
+          50.8805475
+        ]
+      },
+      "properties": {
+        "@id": "node/7835232730",
+        "fee": "no",
+        "access": "yes",
+        "female": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "Stad Leuven",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7868218419",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6978869,
+          50.8816106
+        ]
+      },
+      "properties": {
+        "@id": "node/7868218419",
+        "fee": "no",
+        "male": "yes",
+        "level": "-1",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7868218420",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6979218,
+          50.8816183
+        ]
+      },
+      "properties": {
+        "@id": "node/7868218420",
+        "fee": "no",
+        "level": "-1",
+        "female": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7889718348",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6974394,
+          50.8817737
+        ]
+      },
+      "properties": {
+        "@id": "node/7889718348",
+        "fee": "no",
+        "male": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7889718349",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6974479,
+          50.8817853
+        ]
+      },
+      "properties": {
+        "@id": "node/7889718349",
+        "fee": "no",
+        "female": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/7931846985",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6973932,
+          50.8816824
+        ]
+      },
+      "properties": {
+        "@id": "node/7931846985",
+        "fee": "no",
+        "amenity": "toilets",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "id": "node/8212705548",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6982511,
+          50.8568739
+        ]
+      },
+      "properties": {
+        "@id": "node/8212705548",
+        "access": "customers",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/8283208513",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7025037,
+          50.8791442
+        ]
+      },
+      "properties": {
+        "@id": "node/8283208513",
+        "level": "-1",
+        "access": "yes",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "wheelchair": "yes",
+        "changing_table": "yes",
+        "toilets:disposal": "pitlatrine",
+        "toilets:handwashing": "yes"
+      }
+    },
+    {
+      "id": "node/8540835339",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7148678,
+          50.8788991
+        ]
+      },
+      "properties": {
+        "@id": "node/8540835339",
+        "amenity": "toilets"
+      }
+    },
+    {
+      "id": "node/8632680300",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7139434,
+          50.8839391
+        ]
+      },
+      "properties": {
+        "@id": "node/8632680300",
+        "access": "yes",
+        "amenity": "toilets",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/8977579218",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7182648,
+          50.897155
+        ]
+      },
+      "properties": {
+        "@id": "node/8977579218",
+        "unisex": "yes",
+        "amenity": "toilets",
+        "wheelchair": "no",
+        "changing_table": "no"
+      }
+    },
+    {
+      "id": "node/9050308734",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6994215,
+          50.8564872
+        ]
+      },
+      "properties": {
+        "@id": "node/9050308734",
+        "level": "0",
+        "access": "customers",
+        "indoor": "yes",
+        "unisex": "yes",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/9050308735",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6994377,
+          50.8564921
+        ]
+      },
+      "properties": {
+        "@id": "node/9050308735",
+        "level": "0",
+        "access": "customers",
+        "indoor": "yes",
+        "unisex": "yes",
+        "amenity": "toilets",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/9053315364",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7004512,
+          50.8560385
+        ]
+      },
+      "properties": {
+        "@id": "node/9053315364",
+        "level": "0",
+        "access": "customers",
+        "indoor": "yes",
+        "amenity": "toilets",
+        "operator": "Heilig Hart Heverlee",
+        "changing_table": "no",
+        "toilets:disposal": "flush"
+      }
+    },
+    {
+      "id": "node/9062060455",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6997885,
+          50.8804074
+        ]
+      },
+      "properties": {
+        "@id": "node/9062060455",
+        "fee": "no",
+        "access": "customers",
+        "unisex": "yes",
+        "amenity": "toilets",
+        "changing_table": "yes",
+        "toilets:disposal": "flush",
+        "toilets:position": "seated",
+        "toilets:handwashing": "yes"
+      }
+    }
+  ]
+}
