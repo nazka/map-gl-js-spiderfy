@@ -122,6 +122,7 @@ class Spiderfy3D extends Spiderfy {
               type: 'Point',
               coordinates: [spiderLeafLatLng.lng, spiderLeafLatLng.lat],
             },
+            properties: this.spiderifiedCluster?.leaves[index]?.properties || {},
           }],
         })
       } else {

@@ -95,12 +95,14 @@ class SpiderfyFlat extends Spiderfy {
     this.activeSpiderfyLayerIds.forEach((id) => {
       const { coordinates } = this.spiderifiedCluster.cluster.geometry;
       const source = this.map.getSource(id);
+      const feature = this.spiderifiedCluster?.leaves[id.split('-spiderfy-leaf')[1]];
 
       source.setData({
         type: 'FeatureCollection', 
         features: [{
           type: 'Feature',
           geometry: { type: 'Point', coordinates },
+          properties: feature?.properties || {},
         }],
       })
     })
