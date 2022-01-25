@@ -75,13 +75,13 @@ class SpiderfyFlat extends Spiderfy {
         type: 'symbol',
         layout: {
           ...(spiderLeavesLayout),
-          ...(!spiderLeavesLayout && !spiderLeavesPaint ? layout : {}),
+          ...(!spiderLeavesLayout ? layout : {}),
           'icon-allow-overlap': true,
           'icon-offset': point,
         },
         paint: {
           ...(spiderLeavesPaint),
-          ...(!spiderLeavesPaint && !spiderLeavesLayout ? paint : {}),
+          ...(!spiderLeavesPaint ? paint : {}),
           ...(!spiderLeavesPaint && !spiderLeavesLayout && paint['icon-color'] 
             ? { 'icon-color': paint['icon-color'].toString() } : {})
         },
