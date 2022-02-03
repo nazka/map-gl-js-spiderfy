@@ -97,10 +97,12 @@ class Spiderfy {
       })
 
       this.map.on('zoomend', () => {
-        this.map.once('idle', async () => {
-          this._updateSpiderifiedClusterCoords();
-        });
+        this._updateSpiderifiedClusterCoords();
       })
+
+      this.map.on('idle', () => {
+        this._updateSpiderifiedClusterCoords();
+     })
     });
   }
 
