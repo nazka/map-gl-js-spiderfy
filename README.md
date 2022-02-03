@@ -95,6 +95,7 @@ new Spiderfy(map, options)
 
 - `unspiderfyAll()` clears any active spiderfication from the map [function]
 
+### other remarks
 
 - comment: mention license in readme
 
