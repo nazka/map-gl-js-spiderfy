@@ -5,6 +5,7 @@ itself instead of on top of it. This allows for more advanced interactions with 
 This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any contributions!
 
 comment: explain more which contributions we expect
+comment: explain why we created this code, what are the strengths of this one and the weaknesses of other spiderfication tools
 comment: mention clearly dependancy on markercluster
 
 ## Examples
@@ -96,5 +97,6 @@ new Spiderfy(map, options)
 
 
 comment: mention license in readme
+
 comment: add later a link to a content page on our website
 
