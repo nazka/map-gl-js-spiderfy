@@ -1,18 +1,12 @@
 # map-gl-js-spiderfy
 Spiderfy plugin for [maplibre-gl](https://maplibre.org/) and [mapbox-gl](https://www.mapbox.com/mapbox-gljs). This plugin creates the spiderfication in the canvas
-itself instead of on top of it. This allows for more advanced interactions with the map and its content.
+itself instead of on top of it. This allows for more advanced interactions with the map and its content. This plugin builds upon the [cluster](https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#geojson-cluster) functionality of maplibre and mapbox.
 
-This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any contributions!
-
-- comment: explain more which contributions we expect
-- comment: explain why we created this code, what are the strengths of this one and the weaknesses of other spiderfication tools
-- comment: mention clearly dependancy on markercluster
+This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any [contributions](https://github.com/nazka/map-gl-js-spiderfy#contributing)!
 
 ## Examples
-- [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm)
-- [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX)
-
-comment: explain difference between the purpose of two versions of demo 
+- [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm) - highlights what you can already achieve with little code
+- [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX) - includes all spiderfy options to play around with
 
 ## Usage
 Install the npm package:
@@ -95,9 +89,10 @@ new Spiderfy(map, options)
 
 - `unspiderfyAll()` clears any active spiderfication from the map [function]
 
-### other remarks
+## Contributing
+If an [issue](https://github.com/nazka/map-gl-js-spiderfy/issues) has a `help wanted` tag this means you can pick it up.
 
-- comment: mention license in readme
+You will have to create a fork of this project with your own branch. Once done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. Take a look at [this repo](https://github.com/firstcontributions/first-contributions) if you need more help.
 
-- comment: add later a link to a content page on our website
-
+## License
+This package is published under the [BSD-3-Clause License](https://github.com/nazka/map-gl-js-spiderfy/blob/dev/LICENSE).
