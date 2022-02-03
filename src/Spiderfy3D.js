@@ -85,11 +85,11 @@ class Spiderfy3D extends Spiderfy {
         },
         type: 'symbol',
         layout: {
-          ...(spiderLeavesLayout || !spiderLeavesPaint ? layout : {}),
+          ...(spiderLeavesLayout ? layout : {}),
         },
         paint: {
           ...(spiderLeavesPaint || !spiderLeavesLayout ? paint : {}),
-          ...(!spiderLeavesPaint && !spiderLeavesLayout && paint['icon-color'] 
+          ...(!spiderLeavesPaint && paint['icon-color'] 
             ? { 'icon-color': paint['icon-color'].toString() } : {})
         },
       });
