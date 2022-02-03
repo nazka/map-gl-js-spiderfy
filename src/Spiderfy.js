@@ -98,7 +98,6 @@ class Spiderfy {
 
       this.map.on('zoomend', () => {
         this._updateSpiderifiedClusterCoords();
-        setTimeout(this._updateSpiderifiedClusterCoords(), 2000);
       })
     });
   }
