@@ -90,7 +90,7 @@ new Spiderfy(map, options)
 - `unspiderfyAll()` clears any active spiderfication from the map [function]
 
 ## Contributing
-If an [issue](https://github.com/nazka/map-gl-js-spiderfy/issues) has a `help wanted` tag this means you can pick it up.
+If an [issue](https://github.com/nazka/map-gl-js-spiderfy/issues) has a `help wanted` tag this means you can pick it up, just let us know.
 
 You will have to create a fork of this project with your own branch and work on there. Once done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. 
 
