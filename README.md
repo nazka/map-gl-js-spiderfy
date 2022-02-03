@@ -4,9 +4,14 @@ itself instead of on top of it. This allows for more advanced interactions with 
 
 This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any contributions!
 
+comment: explain more which contributions we expect
+comment: mention clearly dependancy on markercluster
+
 ## Examples
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm)
 - [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX)
+
+comment: explain difference between the purpose of two versions of demo 
 
 ## Usage
 Install the npm package:
