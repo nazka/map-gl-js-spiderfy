@@ -31,8 +31,8 @@ class Spiderfy3D extends Spiderfy {
         geometry: {
           type: 'Point',
           coordinates: [spiderLeafLatLng.lng, spiderLeafLatLng.lat],
-          properties: this.spiderifiedCluster?.leaves[i]?.properties || {},
         },
+        properties: this.spiderifiedCluster?.leaves[i]?.properties || {},
       });
 
       if (!this.options.spiderLegsAreHidden) {
