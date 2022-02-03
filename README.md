@@ -92,7 +92,7 @@ new Spiderfy(map, options)
 ## Contributing
 If an [issue](https://github.com/nazka/map-gl-js-spiderfy/issues) has a `help wanted` tag this means you can pick it up.
 
-You will have to create a fork of this project with your own branch. Once done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. Take a look at [this repo](https://github.com/firstcontributions/first-contributions) if you need more help.
+You will have to create a fork of this project with your own branch and work on there. Once done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. Take a look at [this repo](https://github.com/firstcontributions/first-contributions) if you need more help.
 
 ## License
 This package is published under the [BSD-3-Clause License](https://github.com/nazka/map-gl-js-spiderfy/blob/dev/LICENSE).
