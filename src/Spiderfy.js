@@ -70,6 +70,7 @@ class Spiderfy {
         source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
           this.spiderifiedCluster = { cluster, leaves };
           this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
+          this._updateSpiderifiedClusterCoords();
         });
       });
 
@@ -99,10 +100,6 @@ class Spiderfy {
       this.map.on('zoomend', () => {
         this._updateSpiderifiedClusterCoords();
       })
-
-      this.map.on('idle', () => {
-        this._updateSpiderifiedClusterCoords();
-     })
     });
   }
 
