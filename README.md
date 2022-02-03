@@ -93,3 +93,8 @@ new Spiderfy(map, options)
   - `layerId` maplibre/mapbox layer id [string]
 
 - `unspiderfyAll()` clears any active spiderfication from the map [function]
+
+
+comment: mention license in readme
+comment: add later a link to a content page on our website
+
