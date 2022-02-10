@@ -51,13 +51,13 @@ new Spiderfy(map, options)
 - **`map`** - reference to a maplibre-gl or mapbox-gl instance [object]
 
 - **`options`**
-  - **`onLeafClick`** - allows to do something with the clicked leaf [function]
+  - **`onLeafClick`** - allows to do something with/ put an action on the clicked leaf [function]
 
-  - **`minZoomLevel`** - allow spiderfication starting from this zoom level [number] [default: 0]
+  - **`minZoomLevel`** - allows spiderfication starting from this zoom level [number] [default: 0]
 
-  - **`zoomIncrement`** - if minZoomLevel is not met on cluster click, the map will zoom by this amount instead [number] [default: 2]
+  - **`zoomIncrement`** - if minZoomLevel is not reached on cluster click, the map will zoom by this amount instead [number] [default: 2]
   
-  - **`closeOnLeafClick`** - clear the spiderfication on leaf click [boolean] [default: true]
+  - **`closeOnLeafClick`** - remove the spiderfication on leaf click [boolean] [default: true]
   
   - **`circleSpiralSwitchover`** - number of leaves required to switch from circle to spiral spiderfication [number] [default: 10]
   
@@ -65,7 +65,7 @@ new Spiderfy(map, options)
   
     - **`leavesSeparation`** - distance between the spiderfied leaves in pixels [number] [default: 50]
     
-    - **`leavesOffset`** - move the leaves relative to the parent cluster in pixels [array] [default: [0, 0]]
+    - **`leavesOffset`** - moves the leaves relative to the parent cluster in pixels [array] [default: [0, 0]]
   
   - **`spiralOptions`** - options that are specific to spiral spiderfications, these interact with each other and will probably all require some tweaking when changing one of them [object]
   
@@ -75,7 +75,7 @@ new Spiderfy(map, options)
     
     - **`leavesSeparation`** - distance between the spiderfied leaves in pixels [number] [default: 30]
     
-    - **`leavesOffset`** - move the leaves relative to the parent cluster in pixels [array] [default: [0, 0]]
+    - **`leavesOffset`** - moves the leaves relative to the parent cluster in pixels [array] [default: [0, 0]]
   
   - **`spiderLegsAreHidden`** - don't render the spider legs [boolean] [default: false]
   
@@ -87,7 +87,7 @@ new Spiderfy(map, options)
   
   - **`spiderLeavesPaint`** - your own style paint attributes [object] [default: cluster paint]
   
-  - **`maxLeaves`** - limit the amount of leaves that can be in a spiderfication [number] [default: 255]
+  - **`maxLeaves`** - limits the amount of leaves that can be in a spiderfication [number] [default: 255]
   
   - **`renderMethod`** - set to "3D" for this experimental render feature [string] [default: 'flat']
 
@@ -101,7 +101,7 @@ new Spiderfy(map, options)
 ## Contributing
 If an [issue](https://github.com/nazka/map-gl-js-spiderfy/issues) has a `help wanted` tag this means you can pick it up, just let us know.
 
-You will have to create a fork of this project with your own branch and work on there. Once done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. 
+You will have to create a fork of this project with your own branch and work on there. Once that's done you can create a pull request on this repo. One of the maintainers will have a look at it and give the necessary feedback/questions or merge it into this project. 
 
 Take a look at [this repo](https://github.com/firstcontributions/first-contributions) if you haven't made a contribution to a project on github yet.
 
