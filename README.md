@@ -11,7 +11,8 @@ We try to stand out by:
 - a lot of customizable properties and options (see advanced demo)
 
 A nice extra, screenshots of the spiderification are supported. See here an example:
-[example ]
+
+![screenshot (15)](https://user-images.githubusercontent.com/9056487/153424126-016bacd1-5e8c-4cbc-9607-8a8a9943e7a3.PNG)
 
 ## Demo examples
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm) - highlights what you can already achieve with little code
