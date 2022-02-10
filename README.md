@@ -52,7 +52,7 @@ new Spiderfy(map, options)
 - **`map`** - reference to a maplibre-gl or mapbox-gl instance [object]
 
 - **`options`**
-  - **`onLeafClick`** - allows to do something with/ put an action on the clicked leaf [function]
+  - **`onLeafClick`** - allows to put an action on the clicked leaf [function]
 
   - **`minZoomLevel`** - allows spiderfication starting from this zoom level [number] [default: 0]
 
