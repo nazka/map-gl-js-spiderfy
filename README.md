@@ -108,4 +108,4 @@ Take a look at [this repo](https://github.com/firstcontributions/first-contribut
 
 ## License
 This package is published under the [BSD-3-Clause License](https://github.com/nazka/map-gl-js-spiderfy/blob/dev/LICENSE).
-Copyright (c) 2022, nazka mapps
+Copyright (c) 2022, [nazka mapps](https://www.nazka.be/en/)
