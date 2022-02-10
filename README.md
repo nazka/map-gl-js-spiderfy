@@ -8,7 +8,7 @@ We try to stand out by:
 - compatibility with as wel mapbox-gl as maplibre-gl
 - availability a an npm-package
 - rendering in the canvas (with 3D rendering support)
-- a lot of customizable properties (see advanced demo)
+- a lot of customizable properties and options (see advanced demo)
 
 A nice extra, screenshots of the spiderification are supported. See here an example:
 [example ]
