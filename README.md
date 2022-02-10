@@ -39,7 +39,7 @@ const spiderfy = new Spiderfy(map, {
 // IMPORTANT: the layer must have a cluster source
 spiderfy.applyTo('markers');
 ```
-*Please refer to the examples first if you're having issues.*
+*Please refer to the demo examples first if you're having issues.*
 
 ## Docs
 #### New Spiderfy instance
