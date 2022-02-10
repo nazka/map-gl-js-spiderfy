@@ -6,11 +6,11 @@ This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/)
 
 We try to stand out by:
 - compatibility with as wel mapbox-gl as maplibre-gl
-- availability a an npm-package
+- availability as an npm-package
 - rendering in the canvas (with 3D rendering support)
 - a lot of customizable properties and options (see advanced demo)
 
-A nice extra, screenshots of the spiderification are supported. See here an example:
+A nice extra, since the spiderfication is part of the canvas, generating screenshots of it is really easy
 
 ![screenshot (15)](https://user-images.githubusercontent.com/9056487/153424126-016bacd1-5e8c-4cbc-9607-8a8a9943e7a3.PNG)
 
