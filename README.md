@@ -13,7 +13,7 @@ We try to stand out by:
 A nice extra, screenshots of the spiderification are supported. See here an example:
 [example ]
 
-## Examples
+## Demo examples
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm) - highlights what you can already achieve with little code
 - [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX) - includes all spiderfy options to play around with
 
