@@ -4,6 +4,15 @@ itself instead of on top of it. This allows for more advanced interactions with 
 
 This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any [contributions](https://github.com/nazka/map-gl-js-spiderfy#contributing)!
 
+We try to stand out by:
+- compatibility with as wel mapbox-gl as maplibre-gl
+- availiblity a an npm-package
+- rendering in the canvas (with 3D rendering support)
+- a lot of customizable properties (see advanced demo)
+
+A nice extra, screenshots of the spiderification are supported. See here an example:
+[example ]
+
 ## Examples
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm) - highlights what you can already achieve with little code
 - [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX) - includes all spiderfy options to play around with
