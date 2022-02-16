@@ -6,7 +6,6 @@ This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/)
 
 We try to stand out by:
 - compatibility with as wel mapbox-gl as maplibre-gl
-- availability as an npm-package
 - rendering in the canvas (with 3D rendering support)
 - a lot of customizable properties and options (see advanced demo)
 
