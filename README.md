@@ -5,7 +5,7 @@ itself instead of on top of it. This allows for more advanced interactions with 
 This opensource project is maintained by [nazka mapps](https://www.nazka.be/en/), we gladly welcome any [contributions](https://github.com/nazka/map-gl-js-spiderfy#contributing)!
 
 We try to stand out by:
-- compatibility with as wel mapbox-gl as maplibre-gl
+- compatibility with both mapbox-gl and maplibre-gl
 - rendering in the canvas (with 3D rendering support)
 - a lot of customizable properties and options (see advanced demo)
 
