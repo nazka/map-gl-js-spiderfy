@@ -23,6 +23,10 @@ class Spiderfy {
 
   applyTo(layerId) {
     const layer = this.map.getLayer(layerId);
+    if (layer.type !== 'symbol') {
+      console.error(`map-gl-js-spiderfy found '${layer.type}' as layer type but only 'symbol' is supported`);
+      return;
+    }
     const source = this.map.getSource(layer.source);
 
     this.map.once('idle', () => {
