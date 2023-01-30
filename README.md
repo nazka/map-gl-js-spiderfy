@@ -53,6 +53,8 @@ new Spiderfy(map, options)
 - **`options`**
   - **`onLeafClick`** - allows to put an action on the clicked leaf [function]
 
+  - **`onLeafHover`** - allows to put an action on the hovered leaf [function]
+
   - **`minZoomLevel`** - allows spiderfication starting from this zoom level [number] [default: 0]
 
   - **`zoomIncrement`** - if minZoomLevel is not reached on cluster click, the map will zoom by this amount instead [number] [default: 2]

@@ -77,6 +77,18 @@ class Spiderfy {
         });
       });
 
+      if (this.options.onLeafHover) {
+        this.map.on('hover', (e) => {
+          const features = this.map.queryRenderedFeatures(e.point);
+          const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
+
+          if (leaf) {
+            const feature = this.spiderifiedCluster?.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
+            this.options.onLeafHover(feature);
+          }
+        });
+      }
+
       this.map.on('zoom', async () => {
         if (!this.spiderifiedCluster) return;
 
