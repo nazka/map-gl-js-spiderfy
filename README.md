@@ -51,9 +51,9 @@ new Spiderfy(map, options)
 - **`map`** - reference to a maplibre-gl or mapbox-gl instance [object]
 
 - **`options`**
-  - **`onLeafClick`** - allows to put an action on the clicked leaf [function]
+  - **`onLeafClick`** - allows to put an action on the clicked leaf [function (feature, event)]
 
-  - **`onLeafHover`** - allows to put an action on the hovered leaf [function]
+  - **`onLeafHover`** - allows to put an action on the hovered leaf [function (feature, event)]
 
   - **`minZoomLevel`** - allows spiderfication starting from this zoom level [number] [default: 0]
 
