@@ -1,4 +1,7 @@
 # map-gl-js-spiderfy &middot; [![npm version](https://img.shields.io/npm/v/@nazka/map-gl-js-spiderfy)](https://www.npmjs.com/package/@nazka/map-gl-js-spiderfy) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/nazka/map-gl-js-spiderfy#contributing)
+
+### $${\color{red}The \space latest \space Maplibre \space release \space (4.0.0) \space breaks \space this \space plugin. \space Please \space use \space Maplibre \space 3.6.2 \space while \space I \space resolve \space this \space issue.}$$
+
 Spiderfy plugin for [maplibre-gl](https://maplibre.org/) and [mapbox-gl](https://www.mapbox.com/mapbox-gljs). This plugin creates the spiderfication in the canvas
 itself instead of on top of it. This allows for more advanced interactions with the map and its content. This plugin builds further upon the [cluster](https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#geojson-cluster) functionality of maplibre and mapbox.
 
