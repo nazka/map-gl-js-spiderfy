@@ -18,7 +18,7 @@ A nice extra, since the spiderfication is part of the canvas, generating screens
 ### Maplibre ^4.0.0
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/pen/YzgMqKB) - highlights what you can already achieve with little code
 - [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/pen/LYavNEJ) - includes all spiderfy options to play around with
-### Older Maplibre versions and Mapbox
+### Mapbox and older Maplibre versions 
 - [map-gl-js-spiderfy basic demo](https://codepen.io/nazka-mapps/full/YzroBBm) - highlights what you can already achieve with little code
 - [map-gl-js-spiderfy advanced demo](https://codepen.io/nazka-mapps/full/KKXjJYX) - includes all spiderfy options to play around with
 
