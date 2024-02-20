@@ -72,10 +72,17 @@ class Spiderfy {
         this.clickedParentClusterStyle = { type: layer.type, layout, paint };
 
         const clusterId = cluster.properties.cluster_id;
-        source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
-          this.spiderifiedCluster = { cluster, leaves };
-          this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
-        });
+        if (source.getClusterLeaves.toString().includes('sendAsync')) {
+          source.getClusterLeaves(clusterId, maxLeaves, 0).then((leaves) => {
+            this.spiderifiedCluster = { cluster, leaves };
+            this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
+          });
+        } else {
+          source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
+            this.spiderifiedCluster = { cluster, leaves };
+            this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
+          });
+        }
       });
 
       if (this.options.onLeafHover) {

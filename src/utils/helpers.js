@@ -9,10 +9,16 @@ async function findAsync(arr, asyncCallback) {
 
 async function getClusterLeavesAsync(source, clusterId, maxLeaves) {
   return new Promise((resolve, reject) => {
-    source.getClusterLeaves(clusterId, maxLeaves, 0, (err, features) => {
-      if (err) reject(err);
-      else resolve(features);
-    });
+    if (source.getClusterLeaves.toString().includes('sendAsync')) {
+      source.getClusterLeaves(clusterId, maxLeaves, 0).then((features) => {
+        resolve(features);
+      });
+    } else {
+      source.getClusterLeaves(clusterId, maxLeaves, 0, (err, features) => {
+        if (err) reject(err);
+        else resolve(features);
+      });
+    }
   });
 }
 
