@@ -8,18 +8,25 @@ class Spiderfy {
     this.spiderifiedCluster = null;
     this.clickedParentClusterStyle = null;
     this.lastHoveredLeaf = null;
-    this.options = { 
-      ...defaultOptions, 
+    this.options = {
+      ...defaultOptions,
       ...(options || {}),
       circleOptions: {
-        ...defaultOptions.circleOptions, 
+        ...defaultOptions.circleOptions,
         ...(options?.circleOptions || {}),
       },
       spiralOptions: {
-        ...defaultOptions.spiralOptions, 
+        ...defaultOptions.spiralOptions,
         ...(options?.spiralOptions || {}),
       },
     };
+    this.mapevents = {
+      click: null,
+      zoom: null,
+      zoomend: null,
+      idle: null,
+      mousemove: null,
+    }
   }
 
   applyTo(layerId) {
@@ -30,7 +37,7 @@ class Spiderfy {
     }
     const source = this.map.getSource(layer.source);
 
-    this.map.once('idle', () => {
+    this.map.once('idle', this.mapevents.idle = () => {
       const layout = layer.layout?._values ? {} : (layer.layout || {});
       const paint = layer.paint?._values ? {} : (layer.paint || {});
 
@@ -46,10 +53,10 @@ class Spiderfy {
         });
       }
 
-      this.map.on('click', (e) => {
+      this.map.on('click', this.mapevents.click = (e) => {
         const { maxLeaves, closeOnLeafClick, minZoomLevel, zoomIncrement } = this.options;
         const features = this.map.queryRenderedFeatures(e.point);
-        
+
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
         if (leaf) {
           const feature = this.spiderifiedCluster?.leaves[leaf.layer.id.split('-spiderfy-leaf')[1]];
@@ -91,7 +98,7 @@ class Spiderfy {
       });
 
       if (this.options.onLeafHover) {
-        this.map.on('mousemove', (e) => {
+        this.map.on('mousemove', this.mapevents.mousemove = (e) => {
           const features = this.map.queryRenderedFeatures(e.point);
           const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
 
@@ -107,7 +114,7 @@ class Spiderfy {
         });
       }
 
-      this.map.on('zoom', async () => {
+      this.map.on('zoom', this.mapevents.zoom = async () => {
         if (!this.spiderifiedCluster) return;
 
         const currentCluster = this.spiderifiedCluster;
@@ -130,13 +137,33 @@ class Spiderfy {
         }
       })
 
-      this.map.on('zoomend', () => {
+      this.map.on('zoomend', this.mapevents.zoomend = () => {
         this._updateSpiderifiedClusterCoords();
       })
     });
   }
 
   unspiderfyAll() {
+    if (this.mapevents.click) {
+      this.map.off('click', this.mapevents.click);
+      this.mapevents.click = null;
+    }
+    if (this.mapevents.zoom) {
+      this.map.off('zoom', this.mapevents.zoom);
+      this.mapevents.zoom = null;
+    }
+    if (this.mapevents.zoomend) {
+      this.map.off('zoomend', this.mapevents.zoomend);
+      this.mapevents.zoomend = null;
+    }
+    if (this.mapevents.idle) {
+      this.map.off('idle', this.mapevents.idle);
+      this.mapevents.idle = null;
+    }
+    if (this.mapevents.mousemove) {
+      this.map.off('mousemove', this.mapevents.mousemove);
+      this.mapevents.mousemove = null;
+    }
     this._clearSpiderifiedCluster();
   }
 
@@ -156,7 +183,7 @@ class Spiderfy {
   }
 
   _calculatePointsInSpiral(totalPoints) {
-    const { 
+    const {
       legLengthStart, legLengthFactor, leavesSeparation, leavesOffset,
     } = this.options.spiralOptions;
     const points = [];
