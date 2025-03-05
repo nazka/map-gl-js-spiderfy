@@ -33,6 +33,7 @@ class Spiderfy3D extends Spiderfy {
           coordinates: [spiderLeafLatLng.lng, spiderLeafLatLng.lat],
         },
         properties: this.spiderifiedCluster?.leaves[i]?.properties || {},
+        id: i,
       });
 
       if (!this.options.spiderLegsAreHidden) {
@@ -45,6 +46,7 @@ class Spiderfy3D extends Spiderfy {
               [spiderLeafLatLng.lng, spiderLeafLatLng.lat],
             ],
           },
+          id: i,
         });
       }
     }
