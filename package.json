@@ -1,11 +1,11 @@
 {
   "name": "@nazka/map-gl-js-spiderfy",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Spiderfy for Maplibre and Mapbox",
   "author": "nazka mapps",
   "license": "BSD-3-Clause License",
   "main": "dist/index.js",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/nazka/map-gl-js-spiderfy.git"

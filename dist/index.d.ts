@@ -1,4 +1,4 @@
-import { Map, MapMouseEvent, GeoJSONFeature } from 'maplibre-gl';
+import type { Map, MapMouseEvent, GeoJSONFeature } from 'maplibre-gl';
 
 declare module '@nazka/map-gl-js-spiderfy' {
   export interface SpiderfyOptions {
