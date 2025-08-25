@@ -19,6 +19,6 @@ declare module '@nazka/map-gl-js-spiderfy' {
   export default class Spiderfy {
     constructor(map: Map, options?: SpiderfyOptions);
     applyTo(layerId: string): void;
-    unspiderfy(): void;
+    unspiderfyAll(): void;
   }
 }
