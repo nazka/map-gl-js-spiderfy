@@ -36,8 +36,7 @@ import Spiderfy from '@nazka/map-gl-js-spiderfy';
 // create a new spiderfy object
 const spiderfy = new Spiderfy(map, {
   onLeafClick: f => console.log(f),
-  minZoomLevel: 12,
-  zoomIncrement: 2,
+  forceSpiderifyMinZoom: 12,
 });
 
 // enable spiderfy on a layer
@@ -60,9 +59,7 @@ new Spiderfy(map, options)
 
   - **`onLeafHover`** - allows to put an action on the hovered leaf [function (feature, event)]
 
-  - **`minZoomLevel`** - allows spiderfication starting from this zoom level [number] [default: 0]
-
-  - **`zoomIncrement`** - if minZoomLevel is not reached on cluster click, the map will zoom by this amount instead [number] [default: 2]
+  - **`forceSpiderifyMinZoom`** - the minimum zoom level at which the cluster will always spiderfy on click [number]
   
   - **`closeOnLeafClick`** - remove the spiderfication on leaf click [boolean] [default: true]
   
@@ -102,6 +99,8 @@ new Spiderfy(map, options)
 - `applyTo(layerId)` apply the spiderfier on a layer [function]
 
   - `layerId` maplibre/mapbox layer id [string]
+
+- `spiderfy(layerId, clusterId)` activates spiderfying for a specific cluster programmatically. The specified cluster must be visible in the current map view for spiderfication to occur.
 
 - `unspiderfyAll()` clears any active spiderfication from the map [function]
 

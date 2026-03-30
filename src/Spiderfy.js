@@ -54,7 +54,7 @@ class Spiderfy {
       }
 
       this.map.on('click', this.mapevents.click = (e) => {
-        const { maxLeaves, closeOnLeafClick, minZoomLevel, zoomIncrement } = this.options;
+        const { closeOnLeafClick, forceSpiderifyMinZoom } = this.options;
         const features = this.map.queryRenderedFeatures(e.point);
 
         const leaf = features.find(f => f.layer.id.includes(`${layerId}-spiderfy-leaf`));
@@ -63,37 +63,31 @@ class Spiderfy {
           if (this.options.onLeafClick) this.options.onLeafClick(feature, e);
           if (closeOnLeafClick) this._clearSpiderifiedCluster();
           return;
+        } else {
+          this._clearSpiderifiedCluster();
         }
 
         const cluster = features.find(f => f.layer.id === layerId && f.properties?.cluster);
-        const prevClusterId = this.spiderifiedCluster?.cluster?.properties?.cluster_id;
 
-        if (cluster && this.map.getZoom() < minZoomLevel) {
-          if (zoomIncrement) {
-            this.map.flyTo({center: e.lngLat.toArray(), zoom: this.map.getZoom() + zoomIncrement});
+        if (cluster) {
+          const prevClusterId = this.spiderifiedCluster?.cluster?.properties?.cluster_id;
+          if (this.spiderifiedCluster && prevClusterId === cluster?.properties?.cluster_id) return;
+
+          this.clickedParentClusterStyle = { type: layer.type, layout, paint };
+
+          if (!forceSpiderifyMinZoom || forceSpiderifyMinZoom > this.map.getZoom()) {
+            source.getClusterExpansionZoom(cluster.properties.cluster_id).then((zoom) => {
+              if (zoom > forceSpiderifyMinZoom || zoom > this.map.getMaxZoom()) {
+                this.spiderfy(layerId, cluster.properties.cluster_id);
+              } else {
+                this.map.easeTo({ center: cluster.geometry.coordinates, zoom });
+              }
+            }).catch((error) => {
+              console.error('Error getting cluster expansion zoom:', error);
+            });
+          } else {
+            this.spiderfy(layerId, cluster.properties.cluster_id);
           }
-          return;
-        }
-
-        if (this.spiderifiedCluster && prevClusterId === cluster?.properties?.cluster_id) return;
-
-        this._clearSpiderifiedCluster();
-
-        if (!cluster) return;
-
-        this.clickedParentClusterStyle = { type: layer.type, layout, paint };
-
-        const clusterId = cluster.properties.cluster_id;
-        if (source.getClusterLeaves.toString().includes('sendAsync')) {
-          source.getClusterLeaves(clusterId, maxLeaves, 0).then((leaves) => {
-            this.spiderifiedCluster = { cluster, leaves };
-            this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
-          });
-        } else {
-          source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
-            this.spiderifiedCluster = { cluster, leaves };
-            this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
-          });
         }
       });
 
@@ -141,6 +135,30 @@ class Spiderfy {
         this._updateSpiderifiedClusterCoords();
       })
     });
+  }
+
+  spiderfy(layerId, clusterId) {
+    const { maxLeaves } = this.options;
+    
+    this._clearSpiderifiedCluster();
+
+    const layer = this.map.getLayer(layerId);
+    const source = this.map.getSource(layer.source);
+
+    const features = this.map.querySourceFeatures(layer.source);
+    const cluster = features.find(f => f.properties && f.properties.cluster_id === clusterId);
+
+    if (source.getClusterLeaves.toString().includes('sendAsync')) {
+      source.getClusterLeaves(clusterId, maxLeaves, 0).then((leaves) => {
+        this.spiderifiedCluster = { cluster, leaves };
+        this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
+      });
+    } else {
+      source.getClusterLeaves(clusterId, maxLeaves, 0, (error, leaves) => {
+        this.spiderifiedCluster = { cluster, leaves };
+        this._createSpiderfyLayers(layerId, leaves, cluster.geometry.coordinates);
+      });
+    }
   }
 
   unspiderfyAll() {

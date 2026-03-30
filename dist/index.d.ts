@@ -4,8 +4,7 @@ declare module '@nazka/map-gl-js-spiderfy' {
   export interface SpiderfyOptions {
     onLeafClick?: (feature: GeoJSONFeature, event: MapMouseEvent) => void;
     onLeafHover?: (feature: GeoJSONFeature, event: MapMouseEvent) => void;
-    minZoomLevel?: number;
-    zoomIncrement?: number;
+    forceSpiderifyMinZoom?: number;
     closeOnLeafClick?: boolean;
     circleSpiralSwitchover?: number;
     circleOptions?: {
@@ -33,6 +32,7 @@ declare module '@nazka/map-gl-js-spiderfy' {
       options?: SpiderfyOptions,
     );
     applyTo(layerId: string): void;
+    spiderfy(clusterLayerId: string, clusterId: number): void;
     unspiderfyAll(): void;
   }
 }

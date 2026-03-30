@@ -1,7 +1,6 @@
 const defaultOptions = {
   maxLeaves: 255,
-  minZoomLevel: 0,
-  zoomIncrement: 2,
+  forceSpiderifyMinZoom: null,
   closeOnLeafClick: true,
   circleSpiralSwitchover: 10,
   circleOptions: {
