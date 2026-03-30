@@ -204,8 +204,12 @@ class Spiderfy {
   _clearSpiderifiedCluster() {
     const layerIds = [...this.activeSpiderfyLayerIds];
     layerIds.forEach((layerId) => {
-      this.map.removeLayer(layerId);
-      this.map.removeSource(layerId);
+      if (this.map.getLayer(layerId)) {
+        this.map.removeLayer(layerId);
+      }
+      if (this.map.getSource(layerId)) {
+        this.map.removeSource(layerId);
+      }
     });
     this.spiderifiedCluster = null;
     this.activeSpiderfyLayerIds = [];
